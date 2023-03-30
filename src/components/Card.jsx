@@ -16,6 +16,10 @@ const mapping = {
     svg: "/dice-roll.svg",
     link: "/game/dice-roll",
   },
+  cf: {
+    svg: "/coin-flip.svg",
+    link: "/game/coin-flip",
+  },
 }
 
 const Card = ({ game }) => {

@@ -12,7 +12,7 @@ const GameList = () => {
         <Card game="ttt" />
         <Card game="sps" />
         <Card game="dr" />
-        <Card game="ttt" />
+        <Card game="cf" />
       </Stack>
     </Stack>
   )
