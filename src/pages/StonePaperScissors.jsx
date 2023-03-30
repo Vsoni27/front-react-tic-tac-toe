@@ -4,6 +4,8 @@ import { Navigate, useNavigate } from "react-router"
 import { useSnackbar } from "notistack"
 import { io } from "socket.io-client"
 import StonePaperScissorsBoard from "../components/boards/StonePaperScissorsBoard"
+import Waiting from "../components/Waiting"
+import Connecting from "../components/Connecting"
 
 const StonePaperScissors = () => {
   const { account } = useMoralis()
@@ -55,8 +57,8 @@ const StonePaperScissors = () => {
 
   if (state) return <StonePaperScissorsBoard state={state} socket={socket} account={account} />
 
-  if (waiting) return <div>waiting...</div>
-  return <div>Connecting...</div>
+  if (waiting) return <Waiting />
+  return <Connecting />
 }
 
 export default StonePaperScissors
