@@ -62,13 +62,31 @@ const StonePaperScissorsBoard = ({ state: { round, points, move, players_idx }, 
         gap={2}
         sx={{ bgcolor: "#E5E4E2", p: "12px", borderRadius: "6px" }}
       >
-        <Button onClick={() => chooseChoice(0)} disabled={Boolean(move[myPlayerIdx])} variant="contained" color="error" size="large">
+        <Button
+          onClick={() => chooseChoice(0)}
+          disabled={Boolean(move[myPlayerIdx] !== null)}
+          variant="contained"
+          color="error"
+          size="large"
+        >
           Stone
         </Button>
-        <Button onClick={() => chooseChoice(1)} disabled={Boolean(move[myPlayerIdx])} variant="contained" color="error" size="large">
+        <Button
+          onClick={() => chooseChoice(1)}
+          disabled={Boolean(move[myPlayerIdx] !== null)}
+          variant="contained"
+          color="error"
+          size="large"
+        >
           Paper
         </Button>
-        <Button onClick={() => chooseChoice(2)} disabled={Boolean(move[myPlayerIdx])} variant="contained" color="error" size="large">
+        <Button
+          onClick={() => chooseChoice(2)}
+          disabled={Boolean(move[myPlayerIdx] !== null)}
+          variant="contained"
+          color="error"
+          size="large"
+        >
           Scissors
         </Button>
       </Stack>
