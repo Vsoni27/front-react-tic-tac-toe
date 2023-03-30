@@ -11,7 +11,7 @@ const GameList = () => {
       <Stack flexWrap="wrap" flexDirection="row" justifyContent="center" alignItems="center" gap={2}>
         <Card game="ttt" />
         <Card game="sps" />
-        <Card game="sps" />
+        <Card game="dr" />
         <Card game="ttt" />
       </Stack>
     </Stack>

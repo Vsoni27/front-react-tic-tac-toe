@@ -12,6 +12,10 @@ const mapping = {
     svg: "/stone-paper-scissors.svg",
     link: "/game/stone-paper-scissors",
   },
+  dr: {
+    svg: "/dice-roll.svg",
+    link: "/game/dice-roll",
+  },
 }
 
 const Card = ({ game }) => {
