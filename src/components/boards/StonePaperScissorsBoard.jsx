@@ -17,16 +17,16 @@ const StonePaperScissorsBoard = ({ state: { round, points, move, players_idx }, 
 
   return (
     <Stack flexGrow={1} justifyContent="center" alignItems="center" gap={2}>
-      <Typography variant="h4" color="red" fontWeight="bold">
+      <Typography variant="h4" fontWeight="bold">
         Round {round}
       </Typography>
 
       <Stack flexDirection="row" gap={10}>
-        <Typography variant="body1" color="red" fontWeight="bold">
+        <Typography variant="body1" fontWeight="bold">
           My Score : {points[myPlayerIdx]}
         </Typography>
 
-        <Typography variant="body1" color="red" fontWeight="bold">
+        <Typography variant="body1" fontWeight="bold">
           Opponent Score : {points[opponentPlayerIdx]}
         </Typography>
       </Stack>
