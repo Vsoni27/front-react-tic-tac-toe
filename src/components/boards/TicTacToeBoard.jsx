@@ -1,6 +1,7 @@
 import React from "react"
 import "../../styles/tic-tac-toe.css"
 import { Typography } from "@mui/material"
+import { Stack } from "@mui/material"
 
 const Square = ({ chooseSquare, val }) => {
   return (
@@ -15,7 +16,7 @@ const TicTacToeBoard = ({ state: { board, players_idx, turn }, socket, account }
   const chooseSquare = (square) => socket.emit("state:server", { square })
 
   return (
-    <>
+    <Stack flexGrow={1} justifyContent="center" alignItems="center">
       <Typography variant="h4" color="red" fontWeight="bold">
         {players_idx[account] === turn ? "Your Turn!" : "Opponents Turn!"}
       </Typography>
@@ -81,7 +82,7 @@ const TicTacToeBoard = ({ state: { board, players_idx, turn }, socket, account }
           />
         </div>
       </div>
-    </>
+    </Stack>
   )
 }
 

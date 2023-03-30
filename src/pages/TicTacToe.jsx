@@ -3,7 +3,6 @@ import { useMoralis } from "react-moralis"
 import { Navigate, useNavigate } from "react-router"
 import { useSnackbar } from "notistack"
 import TicTacToeBoard from "../components/boards/TicTacToeBoard"
-import { Stack } from "@mui/material"
 import { io } from "socket.io-client"
 
 const TicTakToe = () => {
@@ -54,12 +53,7 @@ const TicTakToe = () => {
 
   if (!account) return <Navigate to="/games" />
 
-  if (state)
-    return (
-      <Stack flexGrow={1} justifyContent="center" alignItems="center">
-        <TicTacToeBoard state={state} socket={socket} account={account} />
-      </Stack>
-    )
+  if (state) return <TicTacToeBoard state={state} socket={socket} account={account} />
 
   if (waiting) return <div>waiting...</div>
   return <div>Connecting...</div>
