@@ -24,9 +24,10 @@ const Card = ({ game }) => {
   return (
     <Stack sx={{ bgcolor: "#E5E4E2", borderRadius: "10px" }}>
       <Box component="img" src={mapping[game].svg} height="300px" width="300px" sx={{ p: "24px" }} />
+
       {account ? (
         <Link to={mapping[game].link}>
-          <Button variant="contained" sx={{ width: "100%", borderStartStartRadius: 0, borderStartEndRadius: 0 }}>
+          <Button color="error" variant="contained" sx={{ width: "100%", borderStartStartRadius: 0, borderStartEndRadius: 0 }}>
             Play
           </Button>
         </Link>

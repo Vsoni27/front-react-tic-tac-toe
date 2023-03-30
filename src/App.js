@@ -6,7 +6,17 @@ import { Stack } from "@mui/material"
 
 const App = () => {
   return (
-    <Stack sx={{ height: "100vh", width: "100vw", bgcolor: "#000" }}>
+    <Stack
+      sx={{
+        height: "100vh",
+        width: "100vw",
+        bgcolor: "#000",
+        backgroundImage: `url(${"https://wallpaperaccess.com/full/109392.jpg"})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Navbar />
 
       <Routes>

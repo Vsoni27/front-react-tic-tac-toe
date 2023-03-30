@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
   return (
     <Stack flexDirection="row" justifyContent="space-between" alignItems="center" sx={{ p: "16px", borderBottom: "4px solid red" }}>
-      <Link to="/games">
+      <Link to="/">
         <Typography variant="h5" color="red" fontWeight="bold">
           Blockchain Gamerz
         </Typography>
