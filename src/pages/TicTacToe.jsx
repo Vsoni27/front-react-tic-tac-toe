@@ -8,7 +8,6 @@ import { io } from "socket.io-client"
 
 const TicTakToe = () => {
   const { account } = useMoralis()
-
   const navigate = useNavigate()
   const { enqueueSnackbar } = useSnackbar()
 
@@ -17,7 +16,7 @@ const TicTakToe = () => {
   const [socket, setSocket] = useState(null)
 
   useEffect(() => {
-    const URL = `${process.env.REACT_APP_BACKEND_URL}/tic-tac-toe`
+    const URL = `${process.env.REACT_APP_BACKEND_URL}/t-t-t`
     const socket = io(URL)
     setSocket(socket)
 

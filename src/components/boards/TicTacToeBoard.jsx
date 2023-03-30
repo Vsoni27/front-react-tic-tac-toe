@@ -11,13 +11,13 @@ const Square = ({ chooseSquare, val }) => {
   )
 }
 
-const TicTacToeBoard = ({ state: { board, players, turn }, socket, account }) => {
+const TicTacToeBoard = ({ state: { board, players_idx, turn }, socket, account }) => {
   const chooseSquare = (square) => socket.emit("state:server", { square })
 
   return (
     <>
       <Typography variant="h4" color="red" fontWeight="bold">
-        {players[account] === turn ? "Your Turn!" : "Opponents Turn!"}
+        {players_idx[account] === turn ? "Your Turn!" : "Opponents Turn!"}
       </Typography>
       <div className="board">
         <div className="row">
