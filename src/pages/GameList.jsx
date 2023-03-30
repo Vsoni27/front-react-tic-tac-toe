@@ -1,7 +1,6 @@
 import React from "react"
 import { Stack, Typography } from "@mui/material"
-
-import TicTacToeCard from "../components/cards/TicTacToeCard"
+import Card from "../components/Card"
 
 const GameList = () => {
   return (
@@ -10,12 +9,10 @@ const GameList = () => {
         Game List
       </Typography>
       <Stack flexWrap="wrap" flexDirection="row" justifyContent="center" alignItems="center" gap={2}>
-        <TicTacToeCard />
-        <TicTacToeCard />
-        <TicTacToeCard />
-        <TicTacToeCard />
-        <TicTacToeCard />
-        <TicTacToeCard />
+        <Card game="ttt" />
+        <Card game="sps" />
+        <Card game="sps" />
+        <Card game="ttt" />
       </Stack>
     </Stack>
   )

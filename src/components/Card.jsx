@@ -3,14 +3,25 @@ import { Link } from "react-router-dom"
 import { Stack, Button, Box } from "@mui/material"
 import { useMoralis } from "react-moralis"
 
-const TicTacToeCard = () => {
+const mapping = {
+  ttt: {
+    svg: "/tic-tac-toe.svg",
+    link: "/game/tic-tac-toe",
+  },
+  sps: {
+    svg: "/stone-paper-scissors.svg",
+    link: "/game/stone-paper-scissors",
+  },
+}
+
+const Card = ({ game }) => {
   const { account } = useMoralis()
 
   return (
     <Stack sx={{ bgcolor: "#E5E4E2", borderRadius: "10px" }}>
-      <Box component="img" src="/tic-tac-toe.svg" width="300px" sx={{ p: "24px" }} />
+      <Box component="img" src={mapping[game].svg} height="300px" width="300px" sx={{ p: "24px" }} />
       {account ? (
-        <Link to="/game/tic-tac-toe">
+        <Link to={mapping[game].link}>
           <Button variant="contained" sx={{ width: "100%", borderStartStartRadius: 0, borderStartEndRadius: 0 }}>
             Play
           </Button>
@@ -24,4 +35,4 @@ const TicTacToeCard = () => {
   )
 }
 
-export default TicTacToeCard
+export default Card
