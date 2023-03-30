@@ -1,7 +1,7 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import { GameList, Home, Error404, TicTacToe } from "./pages"
+import { GameList, Home, Error404, TicTacToe, StonePaperScissors } from "./pages"
 import { Stack } from "@mui/material"
 
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<GameList />} />
         <Route path="/game/tic-tac-toe" element={<TicTacToe />} />
+        <Route path="/game/stone-paper-scissors" element={<StonePaperScissors />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Stack>
