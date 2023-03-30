@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import { GameList, Home, Error404, TicTacToe } from "./pages"
+import { Stack } from "@mui/material"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Stack sx={{ height: "100vh", width: "100vw", bgcolor: "#000" }}>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/games" element={<GameList />} />
+        <Route path="/game/tic-tac-toe" element={<TicTacToe />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </Stack>
+  )
 }
 
-export default App;
+export default App
