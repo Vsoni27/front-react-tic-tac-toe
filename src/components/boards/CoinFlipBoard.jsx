@@ -63,7 +63,7 @@ const CoinFlipBoard = ({ state: { round, points, move, players_idx, flippedCoin 
             sx={{ bgcolor: "#E5E4E2", p: "12px", borderRadius: "24px" }}
           />
         ) : (
-          <Box height="200px" width="200px" sx={{ border: "2px solid red", p: "12px", borderRadius: "24px" }} />
+          <Box height="200px" width="200px" sx={{ bgcolor: "rgba(0,0,0,0.5)", border: "2px solid red", p: "12px", borderRadius: "24px" }} />
         )}
 
         {move[opponentPlayerIdx] !== null ? (
@@ -75,7 +75,7 @@ const CoinFlipBoard = ({ state: { round, points, move, players_idx, flippedCoin 
             sx={{ bgcolor: "#E5E4E2", p: "12px", borderRadius: "24px" }}
           />
         ) : (
-          <Box height="200px" width="200px" sx={{ border: "2px solid red", p: "12px", borderRadius: "24px" }} />
+          <Box height="200px" width="200px" sx={{ bgcolor: "rgba(0,0,0,0.5)", border: "2px solid red", p: "12px", borderRadius: "24px" }} />
         )}
       </Stack>
 

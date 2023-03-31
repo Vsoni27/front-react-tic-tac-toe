@@ -32,27 +32,15 @@ const StonePaperScissorsBoard = ({ state: { round, points, move, players_idx }, 
       </Stack>
 
       {move[opponentPlayerIdx] !== null ? (
-        <Box
-          src={mapping[move[opponentPlayerIdx]]}
-          component="img"
-          height="200px"
-          width="200px"
-          sx={{ border: "2px solid red", bgcolor: "#E5E4E2" }}
-        />
+        <Box src={mapping[move[opponentPlayerIdx]]} component="img" height="200px" width="200px" sx={{ bgcolor: "#E5E4E2" }} />
       ) : (
-        <Box height="200px" width="200px" sx={{ border: "2px solid red" }} />
+        <Box height="200px" width="200px" sx={{ bgcolor: "rgba(0,0,0,0.5)", border: "2px solid red" }} />
       )}
 
       {move[myPlayerIdx] !== null ? (
-        <Box
-          src={mapping[move[myPlayerIdx]]}
-          component="img"
-          height="200px"
-          width="200px"
-          sx={{ border: "2px solid red", bgcolor: "#E5E4E2" }}
-        />
+        <Box src={mapping[move[myPlayerIdx]]} component="img" height="200px" width="200px" sx={{ bgcolor: "#E5E4E2" }} />
       ) : (
-        <Box height="200px" width="200px" sx={{ border: "2px solid red" }} />
+        <Box height="200px" width="200px" sx={{ bgcolor: "rgba(0,0,0,0.5)", border: "2px solid red" }} />
       )}
 
       <Stack
