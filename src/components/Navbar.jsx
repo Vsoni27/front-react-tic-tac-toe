@@ -1,15 +1,13 @@
 import React from "react"
-import { Stack, Typography } from "@mui/material"
+import { Stack, Box } from "@mui/material"
 import { ConnectButton } from "@web3uikit/web3"
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <Stack flexDirection="row" justifyContent="space-between" alignItems="center" sx={{ p: "16px", borderBottom: "4px solid red" }}>
+    <Stack flexDirection="row" justifyContent="space-between" alignItems="center" sx={{ p: "16px", borderBottom: "4px solid red", bgcolor:"rgba(0,0,0,0.5)" }}>
       <Link to="/">
-        <Typography variant="h5" color="red" fontWeight="bold">
-          Blockchain Gamerz
-        </Typography>
+        <Box component="img" src="/logo1.svg" height="65px" />
       </Link>
       <ConnectButton moralisAuth={false} />
     </Stack>

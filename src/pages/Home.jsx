@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Button, Stack } from "@mui/material"
+import { Typography, Button, Stack, Box } from "@mui/material"
 import { Link } from "react-router-dom"
 
 const Home = () => {
@@ -18,9 +18,11 @@ const Home = () => {
             md: "800px",
           },
           borderRadius: "14px",
-          backgroundColor: "rgb(8 7 10 / 51%)",
+          bgcolor: "rgb(0,0,0,0.5)",
         }}
       >
+        <Box component="img" src="/logo2.svg" height="140px" />
+
         <Typography variant="body1" textAlign="center" fontWeight="bold" fontSize="16px">
           Welcome to our blockchain gaming platform where players can compete in multiplayer games to win real prizes. Powered by the latest
           blockchain technology, our platform ensures secure and fair gameplay, while offering a diverse range of games and tournaments to
