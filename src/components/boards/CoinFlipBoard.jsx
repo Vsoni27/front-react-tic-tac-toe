@@ -33,14 +33,20 @@ const CoinFlipBoard = ({ state: { round, points, move, players_idx, flippedCoin 
       <Stack alignItems="center">
         {flippedCoin !== null ? (
           <Box
-            src={mapping[flippedCoin]}
             component="img"
+            src={mapping[flippedCoin]}
             height="200px"
             width="200px"
             sx={{ bgcolor: "#E5E4E2", p: "12px", borderRadius: "24px" }}
           />
         ) : (
-          <Box height="200px" width="200px" sx={{ border: "2px solid red", p: "12px", borderRadius: "24px" }} />
+          <Box
+            component="img"
+            src="/coin-toss.svg"
+            height="200px"
+            width="200px"
+            sx={{ bgcolor: "#E5E4E2", p: "12px", borderRadius: "24px" }}
+          />
         )}
         <Typography variant="subtitle1" fontWeight="bold">
           Flipped Coin
