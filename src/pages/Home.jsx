@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const Home = () => {
   return (
-    <Stack flexGrow={1} justifyContent="center" alignItems="center">
+    <Stack flexGrow={1} justifyContent="center" alignItems="center" overflow="auto">
       <Stack
         gap={6}
         sx={{
